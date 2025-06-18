@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Primary Colors */
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+
+    /* Neutral Colors */
+    --my-black: hsl(212, 21%, 14%);
+    --my-grey: hsl(228, 12%, 48%);
+    --my-cream: hsl(30, 38%, 92%);
+    --my-white: hsl(0, 0%, 100%);
+
+    /* Montserrat Font */
+    /*- Weights: 500, 700 */
+
+    /* Fraunces Font */
+    /*- Weights: 700 */
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--my-cream);
+}
+.container{
+    display: grid;
+    max-width: 540px;
+    overflow: hidden;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--my-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.img-product{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.description{
+    width: 100%;
+    padding: 20px;
+}
+.type{
+    margin: 5px;
+    opacity: 0.9;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--my-grey);
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+.perfume-name{
+    line-height: 1;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 8px;
+    color: var(--my-black);
+    font-family: "Fraunces", serif;
+}
+.perfume-desc{
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 5px 5px 15px;
+    color: var(--my-grey);
+    font-family: "Montserrat", sans-serif;
+}
+.prices{
+    display: flex;
+    padding: 5px 0;
+    margin: 20px 8px;
+    align-items: center;
+}
+.prices span:first-child{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--green-500);
+    font-family: "Fraunces", serif;
+}
+.prices span:last-child{
+    padding: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--my-grey);
+    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    color: var(--my-white);
+    background-color: var(--green-500);
+    font-family: "Montserrat", sans-serif;
+}
+button img{
+    width: 14px;
+    margin: 10px;
+    color: var(--my-white);
+}
+button:hover{
+    cursor: pointer;
+    background-color: var(--green-700);
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    color: var(--my-grey);
+    line-height: 1.5;
+}
+
+footer span {
+    color: var(--green-500);
+    font-weight: 600;
+}
+
+footer p {
+    margin: 2px 0;
+}
+
+@media (min-width: 768px) {
+    .img-product {
+        background-image: url(images/image-product-desktop.jpg);
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+    .img-product {
+        width: 100%;
+        height: 240px;
+        background-image: url(images/image-product-mobile.jpg);
+    }
+    footer {
+        display: none;
+    }
+}
